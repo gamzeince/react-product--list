@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# 🛍️ React Ürün Listesi Uygulaması
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bu proje, React kullanılarak oluşturulmuş basit bir e-ticaret ürün listesi uygulamasıdır. Bu uygulamada, farklı API'lerden veri çekme, verileri işleme ve kullanıcıya modern bir arayüzde sunma işlemleri gerçekleştirilmiştir.
 
-## Available Scripts
+<div align="center">
+  <img 
+    src="https://github.com/user-attachments/assets/7d89a77c-d740-4d5e-9ed1-61d6509b412a" 
+    alt="Ürün Listesi Arayüzü" 
+    style="max-width:80%; border-radius:10px; border:2px solid #e2e8f0; box-shadow: 0 6px 12px rgba(0,0,0,0.1);" 
+  />
+</div>
 
-In the project directory, you can run:
+## 🎯 Proje Amacı
 
-### `npm start`
+Bu projede aşağıdaki temel işlemler gerçekleştirilmektedir:
+- **Veri Çekme:**  
+  FakeStore API'si kullanılarak ürün verileri çekilmekte.
+- **Metin Çevirisi:**  
+  Ürün başlıkları ve kategori isimleri, MyMemory çeviri API'si kullanılarak İngilizceden Türkçeye çevrilmekte.
+- **Döviz Kuru Dönüşümü:**  
+  Ürünlerin orijinal USD cinsinden fiyatları, ExchangeRate API'si ile alınan TL kuru kullanılarak Türk Lirası'na dönüştürülmekte.
+- **Kullanıcı Deneyimi:**  
+  Yükleme (loading) ve hata durumları yönetilmekte, ve çevrilmiş ürün verileri modern bir tasarımla ekranda listelenmektedir.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  ## ✨ Proje Özellikleri
+- **Ürün Verilerinin Çekilmesi:**  
+   E‑ticaret servisi üzerinden ürün bilgileri dinamik olarak alınır.
 
-### `npm test`
+- **Çeviri İşlemleri:**  
+   Her ürünün `title` ve `category` bilgisi çeviri API’si ile Türkçeye çevrilir.  
+   Gelen metinlerdeki gereksiz uyarı mesajları `sanitizeMyMemoryText` fonksiyonu ile temizlenir.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Döviz Kuru Entegrasyonu:**  
+   Ürün fiyatları, alınan güncel döviz kuru kullanılarak Türk Lirası’na dönüştürülür.
 
-### `npm run build`
+- **Kullanıcı Arayüzü:**  
+  Çevrilmiş ürün başlıkları, kategori isimleri ve TL fiyatları grid düzeninde modern bir tasarımla listelenir.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Hata ve Yükleme Yönetimi:**  
+   API çağrıları sırasında oluşan hata durumları ve yüklenme aşamaları kullanıcıya anlaşılır geri bildirim mesajlarıyla iletilir.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ## 💻 Kullanılan Teknolojiler
+- **React**
+- **JavaScript (ES6)**
+- **CSS** (Temel stillendirme)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
